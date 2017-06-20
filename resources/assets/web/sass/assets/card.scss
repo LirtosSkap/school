@@ -1,0 +1,276 @@
+/*
+  Fibonacci shortcuts for vh
+ */
+$fh-full: 100vh;
+
+/*
+  Colors
+*/
+$mediumgray: #646464;
+
+#card-menu {
+  z-index: 3;
+  display: none;
+  width: 25%;
+  background-color: $white;
+  height: calc(#{$fh-full} - #{$f68});
+  flex-direction: column;
+  position: fixed;
+  top: $f68;
+  .card-menu {
+    overflow-y: auto;
+    max-height: calc(100% - #{$f144});
+    flex: 1 0 auto;
+    .header {
+      padding: $f34;
+      border-bottom: 2px solid $lightgray;
+      figure {
+        height: $f68;
+        width: $f68;
+        display: inline-block;
+        img {
+          border-radius: 50%;
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+          border: 2px solid $white;
+        }
+      }
+      .about-user {
+        display: inline-block;
+        padding: $f13 0 0 $f21;
+        h5 {
+          padding-bottom: $f5;
+          a {
+            font-size: $f21;
+            font-family: AcrobatBold, sans-serif;
+            text-decoration: none;
+            color: $black;
+            &:hover{
+              text-decoration: underline;
+            }
+          }
+        }
+        p {
+          font-size: $f16;
+        }
+      }
+      .button {
+        display: inline-block;
+        float: right;
+        margin-top: $f26;
+        a {
+          text-decoration: none;
+          font-size: $f16;
+        }
+      }
+    }
+    .check-card {
+      padding: $f34;
+      font-family: AcrobatBold, sans-serif;
+      border-bottom: 2px solid $lightgray;
+      .title {
+        font-size: $f34;
+        padding-bottom: $f42;
+      }
+      form {
+        p {
+          margin-bottom: $f26;
+          label {
+            display: block;
+            font-size: $f21;
+            color: $gray;
+            margin-bottom: $f16;
+            line-height: $f21;
+          }
+          > span {
+            height: $f68;
+            color: $black;
+            background-color: $lightgray;
+            display: block;
+            i {
+              font-family: ProximaNovaBold, sans-serif;;
+              padding: $f26;
+              font-size: $f21;
+              display: inline-block;
+            }
+          }
+          .select2 {
+            width: 100% !important;
+            .select2-selection--single {
+              background-color: $lightgray;
+              .select2-selection__rendered {
+                color: $black;
+              }
+            }
+          }
+        }
+        div {
+          p {
+            display: inline-block;
+            width: calc((100% - #{$f21}) / 2);
+          }
+        }
+      }
+    }
+    .description {
+      h6 {
+        margin-top: $f21;
+      }
+      p {
+        font-size: $f21;
+        color: $mediumgray;
+        line-height: $f26;
+      }
+    }
+    .key-words {
+      margin-top: $f21;
+      margin-bottom: $f110;
+      ul li {
+        display: inline-block;
+        margin-right: $f8;
+        margin-bottom: $f34;
+        a {
+          font-size: $f16;
+          font-family: AcrobatBold, sans-serif;
+          text-decoration: none;
+          color: $gray;
+          border-color: $lightgray;
+        }
+      }
+    }
+    .description,
+    .key-words {
+      padding: $f34 $f34 0;
+      h6 {
+        font-family: AcrobatBold, sans-serif;
+        font-size: $f26;
+        color: $black;
+        margin-bottom: $f26;
+        &.keywords-title{
+          margin-bottom: fnW(43);
+        }
+      }
+    }
+  }
+  .buy-card {
+    background-color: $black;
+    height: $f144;
+    flex: 0 0 auto;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    div {
+      display: inline-block;
+    }
+    .price {
+      font-size: $f55;
+      line-height: $f55;
+      font-family: AcrobatBold, sans-serif;
+      color: $white;
+      padding: $f42 0 0 $f34;
+      span {
+        font-size: $f34;
+        line-height: $f68;
+        padding-left: $f5;
+      }
+    }
+    .btn-buy {
+      padding: $f42 $f34 0 0;
+      a {
+        display: block;
+        font-size: $f21;
+      }
+    }
+  }
+}
+
+#card-view {
+  display:none;
+  width: 75%;
+  background-color: $lightgray;
+  height: calc(#{$fh-full} - #{$f68});
+  position: fixed;
+  right: 0;
+  z-index: 3;
+  top: $f68;
+  padding: $f144;
+  text-align: center;
+  .close {
+    position:absolute;
+    text-align: center;
+    vertical-align: $f68;
+    width:$f68;
+    height:$f68;
+    right:$f34;
+    top:$f34;
+    border-radius:$f68;
+    color:$black;
+    &.close-product-overview{
+      img{
+        width: fnW(68);
+        height: fnW(68);
+      }
+    }
+    &:hover{
+      background-color: $gray;
+    }
+  }
+  .product-container {
+    margin-left:auto;
+    margin-right:auto;
+  }
+  
+  .pic-wrap {
+   // @include centerer;
+    height: auto;
+    width:auto;
+    display:flex;
+    margin-left:auto;
+    margin-right:auto;
+    max-width:100%;
+    max-height:100%;
+    padding: $f8;
+    text-align: center;
+    .product-frame {
+      
+    }
+    img {
+      max-width:100%;
+      max-height:100%;
+      outline: 1px solid whitesmoke;
+      padding:$f13;
+      background-color:white;
+    }
+  }
+}
+
+a {
+  &.btn {
+    &.btn-blue {
+      color: $white;
+      background-color: $blue;
+      text-transform: uppercase;
+      font-family: ProximaNovaBold, sans-serif;
+      border: none;
+      &:hover {
+        background-color: $blue - 20;
+      }
+    }
+    &.btn-green {
+      text-transform: uppercase;
+      font-family: ProximaNovaBold, sans-serif;
+      color: $green;
+      border-color: $green;
+      text-decoration: none;
+      &:hover {
+        background-color: $green;
+        color: $white;
+      }
+    }
+    &.medium {
+      padding: $f16 $f26;
+      border-radius: $f34;
+    }
+  }
+}
