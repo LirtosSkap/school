@@ -1,5 +1,6 @@
 {
   "/mix.js": "/mix.js",
   "/web/js/combine.js": "/web/js/combine.js",
-  "/web/css/assets.css": "/web/css/assets.css"
+  "/web/css/assets.css": "/web/css/assets.css",
+  "/web/css/combine.css": "/web/css/combine.css"
 }

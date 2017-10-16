@@ -15,7 +15,7 @@ var glob = require ('glob')
 
 mix.scripts(glob.sync('resources/assets/web/js/*.js'), 'public/web/js/combine.js')
     .sass('resources/assets/web/sass/styles.scss','public/web/css/combine.css')
-    .styles(glob.sync('resources/assets/web/css/*.css'), 'public/web/css/assets.css')
+    .styles(glob.sync('resources/assets/web/css/*.css'), 'public/web/css/assets.css');
 
 /*
  mix.js('resources/assets/js/app.js', 'public/js')
