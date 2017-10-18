@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ config('app.locale') }}">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,15 +9,13 @@
     <title>@yield('title', 'Radio-station')</title>
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <script src="https://maps.googleapis.com/maps/api/js?libraries=places&sensor=false&key=AIzaSyCG2NFV_4jC0HRU8u-uzVqBSbP7lDVJE7A"></script>
-    @include('web.layouts.assets.header')
+    <link rel='stylesheet' type='text/css' href={{asset('web/css/assets.css')}}>
+    <link rel='stylesheet' type='text/css' href={{asset('web/css/combine.css')}}>
 </head>
 <header>
-    @include('web.layouts.components.header')
 </header>
-<body>
-<div class="sgl-wrapper">
+<body class="body">
     @yield('content')
-    @include('web.layouts.assets.footer')
-</div>
+    <script src="{{url('web/js/combine.js')}}"></script>
 </body>
 </html>
